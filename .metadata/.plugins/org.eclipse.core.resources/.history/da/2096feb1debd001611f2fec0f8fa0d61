@@ -1,0 +1,5 @@
+package com.niit.furniset.dao;
+
+public class ContactUsDAOImpl {
+
+}

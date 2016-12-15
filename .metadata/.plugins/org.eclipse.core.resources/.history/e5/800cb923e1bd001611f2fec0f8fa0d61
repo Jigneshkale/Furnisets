@@ -1,0 +1,37 @@
+package com.niit.furniset.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.niit.furniset.dao.ContactUsDAO;
+import com.niit.furniset.model.ContactUs;
+
+@Controller
+public class ContactUsController {
+
+		
+		@Autowired
+		ContactUsDAO contactDAOImpl;
+		
+		@RequestMapping("/sendcontact")
+			public String submitForm(
+						@RequestParam("c_name") String userName,
+						@RequestParam("c_number") String number,
+						@RequestParam("c_email") String email,
+						@RequestParam("c_sugg") String suggestion)
+			{
+			ContactUs cnt=new ContactUs();
+			cnt.setUserName(userName);
+			cnt.setNumber(number);
+			cnt.setEmail(email);
+			cnt.setSuggestion(suggestion);
+			contactUsDAOImpl.createUser(cnt);
+			
+			return "ContactSaved";
+			}
+	}
+
+	
+}

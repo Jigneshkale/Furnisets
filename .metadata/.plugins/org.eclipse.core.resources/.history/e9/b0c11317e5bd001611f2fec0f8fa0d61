@@ -1,0 +1,9 @@
+package com.niit.furniset.dao;
+
+import com.niit.furnisets.model.ContactUs;
+
+public interface ContactUsDAO {
+	
+	void createUser(ContactUs contactus);
+
+}

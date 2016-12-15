@@ -1,0 +1,27 @@
+package com.niit.furnisets.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+public class FrontController {
+
+	@RequestMapping({"/" , "home"})
+	public String home()
+	{		
+		return "index";
+	}
+	
+	@RequestMapping("tel")
+	public String contact()
+	{		
+		return "contact";
+	}
+	
+	@RequestMapping("Signup")
+	public String register()
+	{		
+		return "register";
+	}
+}

@@ -1,0 +1,12 @@
+<%@ include file="/WEB-INF/views/templates/header.jsp" %>
+
+	<div id="div3">
+		<div id="div4">
+			<h3 class="text-center">
+				"Thank You! Your Contact is Safe With Us"<br/>
+				"Click Home To Continue Your Experience"<br/>
+				"In Our World Of Furniture"
+			</h3>
+		</div>
+	</div>	
+<%@ include file="/WEB-INF/views/templates/footer.jsp" %>

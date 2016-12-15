@@ -1,0 +1,30 @@
+1481127328388	Rename resource 'css'
+1481204456155	Rename resource 'bg.jpg'
+1481257159362	Delete element
+1481258216253	Rename resource 'background.jpg'
+1481265609884	Delete element
+1481265653898	Delete element
+1481265665067	Delete element
+1481266049254	Rename package 'com.niit.furniset'
+1481266591117	Delete element
+1481267093580	Delete element
+1481270114049	Rename package 'com.niit.furniset.controller'
+1481270213739	Rename package 'com.niit.furniset.model'
+1481270231463	Rename package 'com.niit.furniset.dao'
+1481282921494	Rename resource 'NewFile.jsp'
+1481283513990	Rename resource 'RegisterU.jsp'
+1481283548217	Delete element
+1481283618460	Rename resource 'Register.jsp'
+1481283760333	Delete element
+1481301916030	Delete element
+1481303967558	Rename resource 'LOGO.ico'
+1481305318981	Delete element
+1481306707849	Move 'style.css' to 'templates'
+1481307037513	Delete element
+1481307044121	Delete element
+1481357022861	Copy compilation unit
+1481357794310	Copy compilation unit
+1481357815041	Copy compilation unit
+1481358058638	Copy compilation unit
+1481358731135	Copy file
+1481364073860	Encapsulate field 'isadmin'

@@ -1,0 +1,50 @@
+package com.niit.furnisets.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.niit.furnisets.dao.ContactUsDAO;
+import com.niit.furnisets.model.ContactUs;
+
+@Controller
+public class RegisterController {
+
+		
+		@Autowired
+		RegisterDAO RegisterDAOImpl;
+		
+		@RequestMapping("/submitted")
+			public String submitForm(
+					
+					@RequestParam("U_first") 
+					String firstName,
+					
+					@RequestParam("U_last") 
+					String lastName,
+					
+					@RequestParam("U_name") 
+					String userName,
+				
+					@RequestParam("U_number")
+					String number,
+				
+					@RequestParam("U_email")
+					String email,
+					
+					@RequestParam("U_pass")
+					String password)
+				{
+					ContactUs cnt=new ContactUs();
+					cnt.setFirstName(firstName);
+					cnt.set
+					cnt.setUserName(userName);
+					cnt.setNumber(number);
+					cnt.setEmail(email);
+					cnt.setSuggestion(suggestion);
+					contactusDAOImpl.createUser(cnt);
+			
+					return "contactupdated";
+				}
+}

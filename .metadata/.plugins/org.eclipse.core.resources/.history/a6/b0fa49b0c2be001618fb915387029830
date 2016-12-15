@@ -1,0 +1,41 @@
+package com.niit.furnisets.controller;
+
+import java.lang.ProcessBuilder.Redirect;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.niit.furnisets.dao.ContactUsDAO;
+import com.niit.furnisets.model.ContactUs;
+
+@Controller
+public class ContactUsController {
+
+		
+		@Autowired
+		ContactUsDAO contactusDAOImpl;
+		
+		@RequestMapping("/sendcontact")
+			public String submitForm(
+				@RequestParam("c_name") 
+				String userName,
+				@RequestParam("c_number")
+				String number,
+				@RequestParam("c_email")
+				String email,
+				@RequestParam("c_sugg")
+				String suggestion,RedirectAttributes popup0)
+				{
+					ContactUs cnt=new ContactUs();
+					cnt.setUserName(userName);
+					cnt.setNumber(number);
+					cnt.setEmail(email);
+					cnt.setSuggestion(suggestion);
+					contactusDAOImpl.createUser(cnt);
+			        popup0.addFlashAttribute("success", "Message");
+					return "redirect:contact";
+				}
+}

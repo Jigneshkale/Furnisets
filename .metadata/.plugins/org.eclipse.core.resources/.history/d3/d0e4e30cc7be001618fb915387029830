@@ -1,0 +1,41 @@
+package com.niit.furnisets.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.niit.furnisets.dao.ContactUsDAO;
+import com.niit.furnisets.model.ContactUs;
+
+@Controller
+public class ContactUsController {
+
+		
+		@Autowired
+		ContactUsDAO contactusDAOImpl;
+		
+		@RequestMapping("/sendcontact")
+			public String submitForm(
+				@RequestParam("c_name") 
+				String userName,
+				@RequestParam("c_number")
+				String number,
+				@RequestParam("c_email")
+				String email,
+				@RequestParam("c_sugg")
+				String suggestion,Model popup1,Model popup2,Model popup3 )
+				{
+					ContactUs cnt=new ContactUs();
+					cnt.setUserName(userName);
+					cnt.setNumber(number);
+					cnt.setEmail(email);
+					cnt.setSuggestion(suggestion);
+					contactusDAOImpl.createUser(cnt);
+					popup1.addAttribute("success", "Thank You! Your Contact is Safe With Us");
+					popup2.addAttribute("success1", "Click Home To Continue Your Experience");
+					popup3.addAttribute("success2", "In Our World Of Furniture");
+					return "contactupdated";
+				}
+}

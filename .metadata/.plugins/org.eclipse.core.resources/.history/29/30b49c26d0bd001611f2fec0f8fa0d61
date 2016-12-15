@@ -1,0 +1,3 @@
+<%@ include file="/WEB-INF/views/templates/header.jsp" %>
+
+<%@ include file="/WEB-INF/views/templates/footer.jsp" %>

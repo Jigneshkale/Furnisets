@@ -1,0 +1,99 @@
+@CHARSET "ISO-8859-1";
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::scrollbar { 
+    display: none; 
+}
+
+::-moz-scrollbar { 
+    display: none; 
+}
+
+/*...............ID................*/
+
+#a0{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#a1{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#carousel-example-generic{
+	background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+
+#div0{
+	background-image: url("../images/headBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#div1{
+	background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0), rgba(0,0,0,0.8));
+}
+
+#div2{
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	filter: drop-shadow(0px 0px 15px #000000);  
+}
+
+#div3{
+	background-image: url("../images/contact.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#div4{
+	
+	width: 80%;
+	padding-right: 20%;
+	padding-left: 10%
+}
+
+#logo0{
+	height: 70%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+    filter: drop-shadow(2px 24px 3px #000000); 
+}
+
+#ul0{
+  background-color: #222;
+  border-color: #080808;
+  &>li>a{
+  	color: #000;
+    &:hover{
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+
+/*..............Class..............*/
+
+.dropdown-menu>li>a{
+	color:#9d9d9d;
+}
+
+.navbar{
+	border-radius: 0px;
+	border: 0px;
+	margin: 0px;
+	box-shadow: 0px 10px 20px 2px;
+	z-index: 1000;
+}
+
+
+

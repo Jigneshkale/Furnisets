@@ -1,0 +1,59 @@
+package com.niit.furniset.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+public class ContactUs implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	int id;
+	@Column(name="LoginId")
+	String userName;
+	String number;
+	String email;
+	String suggestion;
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public String getSuggestion() {
+		return suggestion;
+	}
+	public void setSuggestion(String suggestion) {
+		this.suggestion = suggestion;
+	}
+	
+}
