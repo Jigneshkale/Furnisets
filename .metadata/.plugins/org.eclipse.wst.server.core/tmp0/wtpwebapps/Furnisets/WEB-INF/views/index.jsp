@@ -45,5 +45,9 @@
 	<div id="div13">
 	
 	</div>
+	<div id="div14">
+	
+	</div>
 </div>
+
 <%@ include file="/WEB-INF/views/templates/footer.jsp"%>

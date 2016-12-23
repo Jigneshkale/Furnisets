@@ -15,5 +15,13 @@ public interface ProductsDAO {
 	public List<Products> getAllProducts();
 	
 	public Products getProductById(int id);
+	
+//	public Products getProductByCatagory(String catagory);
+	
+	public List<Products> getProductByCatagory(String catagory);
+	
+//	public Products getProductBySubCatagory(String subCatagory);
+	
+//	public Products getProductByFurtherCatagory(String furtherCatagory);
 
 }

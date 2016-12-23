@@ -2,8 +2,10 @@ package com.niit.furnisets.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -48,6 +50,7 @@ public class ProductsDAOImpl implements ProductsDAO {
 		prod1.setCatagory(prod.getCatagory());
 		prod1.setSubCatagory(prod.getSubCatagory());
 		prod1.setFurtherCatagory(prod.getFurtherCatagory());
+		prod1.setImage(prod.getImage());
 		prod1.setDescription(prod.getDescription());
 		session.update(prod1);
 		System.out.println(prod1.getCatagory());
@@ -73,6 +76,16 @@ public class ProductsDAOImpl implements ProductsDAO {
 	public Products getProductById(int id) {
 		Session session = sessionFactory.getCurrentSession();
 		return (Products) session.get(Products.class, id);
+	}
+
+	@Transactional
+	public List<Products> getProductByCatagory(String catagory) {
+		Session session = sessionFactory.getCurrentSession();
+		Criteria criteria = session.createCriteria(Products.class);
+		criteria.add(Restrictions.eq("catagory", catagory));
+		@SuppressWarnings("unchecked")
+		List<Products> prod=criteria.list();
+		return prod;
 	}
 	
 	

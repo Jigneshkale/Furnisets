@@ -4,7 +4,7 @@
 	<div id="div10">
 		<div class="container-fluid">
 			<form:form cssClass="form-horizontal" action="add" method="post"
-				modelAttribute="prod" id="for1">
+				modelAttribute="prod" enctype="multipart/form-data" id="for1">
 				<div class="row" id="rw0">
 
 					<div class="form-group">
@@ -47,8 +47,14 @@
 							<form:label path="catagory" cssClass="control-label">Category</form:label>
 						</div>
 						<div class="col-md-9">
-							<form:input cssClass="form-control" path="catagory"
-								placeholder="Category" />
+							<form:select cssClass="form-control" path="catagory"
+								placeholder="Category">
+								<form:option value="Living Room">Living Room</form:option>
+								<form:option value="Bed Room">Bed Room</form:option>
+								<form:option value="Kitchen and Dining">Kitchen and Dining</form:option>
+								<form:option value="Study Room">Study Room</form:option>
+								<form:option value="Hall">Hall</form:option>
+								</form:select>
 						</div>
 					</div>
 					<div class="form-group">
@@ -81,6 +87,16 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<div class="col-md-3">
+							<form:label path="image" id="lab0" cssClass="control-label">Image</form:label>
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-9">
+							<form:input type="file" cssClass="form-control" path="image"
+								placeholder="Further-Category" />
+						</div>
+					</div>
+					<div class="form-group">
 						<div class="col-md-offset-3 col-md-2">
 							<button type="submit" class="btn btn-default">Create</button>
 						</div>
@@ -90,6 +106,34 @@
 					</div>
 				</div>
 			</form:form>
+			<form>
+			
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select Language</option>
+                <option value="Php">Php</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Dotnet">Dotnet</option>
+            </select>
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select framework</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Please select framework vesrion</option>
+                </select>
+            </noscript>
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="sub_subcategory" onchange="javascript: urlRedirectTo(this.options[this.selectedIndex].value);" id="sub_subcategory"><option value="">Please select framework version</option></select>')
+            </script>
+            <noscript>
+                <select name="sub_subcategory" id="sub_subcategory" >
+                    <option value="">Please select framework vesrion</option>
+                </select>
+            </noscript>
+        </div>
+			
+			</form>
 		</div>
 	</div>
 	<div id="div11">

@@ -88,17 +88,5 @@
 			</form:form>
 		</div>
 	</div>
-	<div id="div11">
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-10">
-				<h3 class="text-center"
-					style="width: 100%; font-size: auto; color: #ffffff; text-shadow: 0px 0px 10px #000000;">
-					${register0}<br /> ${register1}<br />
-				</h3>
-			</div>
-			<div class="col-md-1"></div>
-		</div>
-	</div>
 </div>
 <%@ include file="/WEB-INF/views/templates/footer.jsp"%>

@@ -3,7 +3,8 @@
 <div id="div9">
 	<div id="div10">
 		<div class="container-fluid">
-			<form:form cssClass="form-horizontal" action="update?id=${product.id}" method="post"
+			<form:form cssClass="form-horizontal"
+				action="update?id=${product.id}" method="post"
 				modelAttribute="product" id="for1">
 				<div class="row" id="rw0">
 
@@ -87,6 +88,16 @@
 						<div class="col-md-9">
 							<form:textarea rows="3" cols="5" cssClass="form-control"
 								path="description" placeholder="Description" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-3">
+							<form:label path="image" id="lab0" cssClass="control-label">Image</form:label>
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-9">
+							<form:input type="file" cssClass="form-control" path="image"
+								placeholder="Further-Category" />
 						</div>
 					</div>
 					<div class="form-group">

@@ -16,6 +16,16 @@ public class Register implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
+	private Boolean enabled=true;
+	
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
 	private String firstName;
 	
 	private String lastName;
@@ -31,7 +41,7 @@ public class Register implements Serializable{
 	
 	private String password;
 	
-	private boolean isadmin=false;
+	private String role;
 
 	public int getId() {
 		return id;
@@ -89,14 +99,12 @@ public class Register implements Serializable{
 		this.password = password;
 	}
 
-	public boolean isIsadmin() {
-		return isadmin;
+	public String getRole() {
+		return role;
 	}
 
-	public void setIsadmin(boolean isadmin) {
-		this.isadmin = isadmin;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
-	
-
 }

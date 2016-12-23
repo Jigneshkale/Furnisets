@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Products implements Serializable{
@@ -29,6 +32,29 @@ public class Products implements Serializable{
 	private String furtherCatagory;
 
 	private String description;
+	
+	private String country;
+	
+	private String state;
+	
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	@Transient
+	private MultipartFile image;
 
 	public int getId() {
 		return id;
@@ -93,6 +119,14 @@ public class Products implements Serializable{
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public MultipartFile getImage() {
+		return image;
+	}
+
+	public void setImage(MultipartFile image) {
+		this.image = image;
 	}
 
 	

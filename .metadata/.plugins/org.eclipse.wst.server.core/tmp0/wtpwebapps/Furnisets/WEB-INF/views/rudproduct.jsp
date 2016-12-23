@@ -29,6 +29,7 @@
 						<th><div class="dd">
 								<span>More Info</span>
 								<div class="dd1">
+									<p>${prod.image}</p>
 									<p>${prod.description}</p>
 								</div>
 							</div></th>

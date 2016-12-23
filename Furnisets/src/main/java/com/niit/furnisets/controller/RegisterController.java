@@ -30,11 +30,12 @@ public class RegisterController {
 	public String addUser
 	(@ModelAttribute Register reg, RedirectAttributes popup4)
 		{		
+		reg.setRole("ROLE_USER");
 		registerDAO.addUser(reg);
 		
 		popup4.addFlashAttribute("register0", "Registered Successfully");
 		popup4.addFlashAttribute("register1", "Login to Continue!!!");
-		return "redirect:Signup";
+		return "redirect:signin";
 		
 	}
 
