@@ -3,32 +3,32 @@
 <div id="div9">
 	<div id="div10">
 		<div class="container-fluid">
-			<table class="table table-hover" id="tab0">
-				<!-- 				<tr> -->
-				<!-- 					<th>Product</th> -->
-				<!-- 					<th>Unit Price</th> -->
-				<!-- 					<th>Quantity</th> -->
-				<!-- 					<th>Price</th> -->
-				<!-- 					<th>Action</th> -->
-				<!-- 				</tr> -->
-				<!-- 					<tr> -->
-				<!-- 						<td>Product name</td> -->
-				<!-- 						<td>Product Price</td> -->
-				<!-- 						<td>Quantity</td> -->
-				<!-- 						<td>Calculated Price</td> -->
-				<!-- 						<td><a href="#" class="label label-danger"><span class="glyphicon glyphicon-remove"></span>Remove</a></td> -->
-				<!-- 					</tr> -->
-				<!-- 					<tr> -->
-				<!-- 						<th></th> -->
-				<!-- 						<th></th> -->
-				<!-- 						<th>Grand Total :</th> -->
-				<!-- 						<th>{{Grand Total}}</th> -->
-				<!-- 						<th><a href="processCheckout" class="btn btn-default">Checkout</a></th> -->
-				<!-- 					</tr> -->
+			<!-- <table class="table table-hover" id="tab0">
+								<tr>
+									<th>Product</th>
+									<th>Unit Price</th>
+									<th>Quantity</th>
+									<th>Price</th>
+									<th>Action</th>
+								</tr>
+									<tr>
+										<td>Product name</td>
+										<td>Product Price</td>
+										<td>Quantity</td>
+										<td>Calculated Price</td>
+										<td><a href="#" class="label label-danger"><span class="glyphicon glyphicon-remove"></span>Remove</a></td>
+									</tr>
+									<tr>
+										<th></th>
+										<th></th>
+										<th>Grand Total :</th>
+										<th>{{Grand Total}}</th>
+										<th><a href="processCheckout" class="btn btn-default">Checkout</a></th>
+									</tr>
 
-			</table>
+			</table> -->
 			<form>
-				<input name="_eventId_submit" type="submit" />
+				<input name="_eventId_sssubmit" type="submit" value="Submit" />
 			</form>
 		</div>
 	</div>

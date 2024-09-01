@@ -65,7 +65,7 @@
 	margin-left: 10%;
 	width: 50%;
 	float: left;
-	background-color: #ffffff;
+	backdrop-filter: blur(40px);
 }
 
 #div5{
@@ -86,7 +86,7 @@
 	margin-right: 10%;
 	width: 50%;
 	float: right;
-	background-color: #ffffff;
+	backdrop-filter: blur(40px);
 }
 
 #div7{
@@ -107,7 +107,7 @@
 	margin-right: 10%;
 	width: 50%;
 	float: right;
-	background-color: #ffffff;
+	backdrop-filter: blur(40px);
 }
 
 #div9{
@@ -128,7 +128,7 @@
 	margin-left: 10%;
 	width: inherit;
 	float: left;
-	background-color: #ffffff;
+	backdrop-filter: blur(40px);
 }
 
 #div11{

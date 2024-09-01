@@ -13,7 +13,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
         <property name="driverClassName"  value="org.h2.Driver"></property>  
-        <property name="url" value="jdbc:h2:tcp://localhost/~/furnisetsdb"></property>  
+        <property name="url" value="jdbc:h2:tcp://localhost/~/test"></property>  
         <property name="username" value="sa"></property>  
         <property name="password" value="furnisets10"></property>  
     </bean>  

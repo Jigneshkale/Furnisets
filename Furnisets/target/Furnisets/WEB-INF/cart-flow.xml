@@ -1,15 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <flow xmlns="http://www.springframework.org/schema/webflow"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow 
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 	
 
-   <view-state id="start" view="processcheckout.jsp">
-   		<transition on="submit" to="validate"></transition>
+   <view-state id="start" view="processcheckout">
+   		<transition on="sssubmit" to="validate"/>
    </view-state>
 
-	<view-state id="collectCustomerInfo" view="billing-address.jsp"
+	<view-state id="validate" view="validate">
+<!-- 		<evaluate expression="demohandler.validateDetails(userBean,messageContext)"></evaluate> -->
+		<transition on="success" to="confirmDetails" />
+		<transition on="failure" to="start" />
+	</view-state>
+
+	<!-- <view-state id="collectCustomerInfo" view="billing-address.jsp"
 		model="cart">
 		<transition on="submit" to="orderConfirmation" />
 		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
@@ -47,6 +53,6 @@
 
 	<global-transitions>
 		<transition on="cancel" to="cancelCheckout" />
-	</global-transitions>
+	</global-transitions> -->
 
 </flow>
